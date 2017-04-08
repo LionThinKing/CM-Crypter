@@ -1,0 +1,34 @@
+# Project: Stub
+# Compiler: Default GCC compiler
+# Compiler Type: MingW 3
+# Makefile created by wxDev-C++ wxDev-C++ IDE 7.4.1.13 on 11/06/12 18:19
+
+WXLIBNAME = wxmsw28u
+CPP       = g++.exe
+CC        = gcc.exe
+WINDRES   = "windres.exe"
+OBJ       = Objects/MingW/main.o
+LINKOBJ   = "Objects/MingW/main.o"
+LIBS      = -L"C:/Program Files (x86)/Dev-Cpp/Lib" -lcomctl32 -lwsock32 -lWininet -mwindows  
+INCS      = -I"C:/Program Files (x86)/Dev-Cpp/Include"
+CXXINCS   = -I"C:/Program Files (x86)/Dev-Cpp/lib/gcc/mingw32/3.4.5/include" -I"C:/Program Files (x86)/Dev-Cpp/include/c++/3.4.5/backward" -I"C:/Program Files (x86)/Dev-Cpp/include/c++/3.4.5/mingw32" -I"C:/Program Files (x86)/Dev-Cpp/include/c++/3.4.5" -I"C:/Program Files (x86)/Dev-Cpp/include" -I"C:/Program Files (x86)/Dev-Cpp/" -I"C:/Program Files (x86)/Dev-Cpp/include/3rdparty/wx/plotctrl" -I"C:/Program Files (x86)/Dev-Cpp/include/3rdparty/wx/sheet" -I"C:/Program Files (x86)/Dev-Cpp/include/3rdparty/wx/treemultictrl" -I"C:/Program Files (x86)/Dev-Cpp/include/3rdparty/wx/things" -I"C:/Program Files (x86)/Dev-Cpp/include/3rdparty/wx" -I"C:/Program Files (x86)/Dev-Cpp/include/3rdparty" -I"C:/Program Files (x86)/Dev-Cpp/include/common/wx/msw" -I"C:/Program Files (x86)/Dev-Cpp/include/common/wx/generic" -I"C:/Program Files (x86)/Dev-Cpp/include/common/wx/fl" -I"C:/Program Files (x86)/Dev-Cpp/include/common/wx/gizmos" -I"C:/Program Files (x86)/Dev-Cpp/include/common/wx/html" -I"C:/Program Files (x86)/Dev-Cpp/include/common/wx/mmedia" -I"C:/Program Files (x86)/Dev-Cpp/include/common/wx/net" -I"C:/Program Files (x86)/Dev-Cpp/include/common/wx/ogl" -I"C:/Program Files (x86)/Dev-Cpp/include/common/wx/plot" -I"C:/Program Files (x86)/Dev-Cpp/include/common/wx/protocol" -I"C:/Program Files (x86)/Dev-Cpp/include/common/wx/stc" -I"C:/Program Files (x86)/Dev-Cpp/include/common/wx/svg" -I"C:/Program Files (x86)/Dev-Cpp/include/common/wx/xml" -I"C:/Program Files (x86)/Dev-Cpp/include/common/wx/xrc" -I"C:/Program Files (x86)/Dev-Cpp/include/common/wx" -I"C:/Program Files (x86)/Dev-Cpp/include/common"
+RCINCS    = --include-dir "C:/PROGRA~2/Dev-Cpp/include/common"
+BIN       = Output/MingW/Stub.exe
+DEFINES   = 
+CXXFLAGS  = $(CXXINCS) $(DEFINES)  
+CFLAGS    = $(INCS) $(DEFINES)  
+GPROF     = gprof.exe
+RM        = rm -f
+LINK      = g++.exe
+
+.PHONY: all all-before all-after clean clean-custom
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	$(RM) $(LINKOBJ) "$(BIN)"
+
+$(BIN): $(OBJ)
+	$(LINK) $(LINKOBJ) -o "$(BIN)" $(LIBS) 
+
+Objects/MingW/main.o: $(GLOBALDEPS) main.cpp
+	$(CPP) -c main.cpp -o Objects/MingW/main.o $(CXXFLAGS)
